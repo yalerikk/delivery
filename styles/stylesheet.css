@@ -1,0 +1,84 @@
+:root {
+    /* ------ Colors ------ */
+
+    /* base */
+    --color-dark: #1B1B1B;
+    --color-white: #FFFFFF;
+
+    /* bg */
+    --color-floral-white: #FDF9F3;
+    --color-champagne: #ECDBC2;
+
+    /* icons, btns, h, counters */
+    --color-carrot-orange: #E68C1A;
+    --color-madder: #A0041E;
+    --color-white-smoke: #F5F5F5;
+    --color-btn20: rgba(230, 140, 26, 0.7);
+
+    /* special text style, counters */
+    --color-silver: #B7B7B7;
+    --color-platinum: #E2E1E1;
+
+    /* ------ Fonts ------ */
+    --font-family: "Manrope", sans-serif;
+    --second-family: "Avenir Next", sans-serif;
+    --third-family: "Crimson Text", sans-serif;
+    --font3: "Playfair Display SC", sans-serif;
+    
+    /* ------ Styles ------ */
+
+    /* --- Container --- */
+    --container-width: 1200px;
+    --container-padding-x: 10px;
+
+    --transition-duration: 0.2s;
+
+    /* --- Btns --- */
+
+    /* border radius */
+    --btn20-border-radius: 20px;
+    /* also for btns, contact data, counter */
+    --btn10-border-radius: 10px;
+    --btn4-border-radius: 4px;
+
+    /* paddings */
+    --btn20-padding: 10px 20px;
+    --btn10-padding: 6px 20px;
+    --btn4-padding: 10px 52px;
+
+    /* other */
+    /* also for partner logos */
+    --btn10-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.25);
+
+    /* --- Basket --- */
+    --basket-box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.12);
+
+    /* --- Counters --- */
+    --counter-border: 1px solid var(--color-silver);
+    --counter-padding: 2px 12px;
+
+    /* ------ Other ------ */
+
+    --input-height: 48px;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 400;
+    /*  */
+    line-height: 1.5;
+    color: var(--color-dark);
+    background-color: var(--color-floral-white);
+}
+
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+}

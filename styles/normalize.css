@@ -1,0 +1,274 @@
+/* Сброс стилей для всех элементов */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    /* Упрощаем работу с размерами */
+}
+
+/* Стили для ссылок */
+a,
+a:visited,
+a:hover {
+    color: inherit;
+    text-decoration: none;
+    /* Убираем подчеркивание */
+}
+
+a:focus,
+a:active {
+    outline: none;
+    /* Убираем обводку при фокусе */
+}
+
+/* Общие стили для блочных элементов */
+aside,
+nav,
+header,
+footer,
+section,
+main {
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    /* Наследуем параметры шрифта */
+}
+
+p+p {
+    margin-top: 1em;
+    /* Отступ между параграфами */
+}
+
+ul,
+ul li {
+    list-style: none;
+    /* Убираем маркеры списков */
+}
+
+img,
+svg {
+    vertical-align: top;
+    max-width: 100%;
+    /* Адаптивные изображения */
+    height: auto;
+}
+
+address {
+    font-style: normal;
+    /* Убираем курсив у адреса */
+}
+
+/* Стили для форм */
+input,
+textarea,
+button,
+select {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: transparent;
+    /* Прозрачный фон */
+}
+
+button,
+input[type="submit"] {
+    display: inline-block;
+    box-shadow: none;
+    background-color: transparent;
+    /* Убираем задний фон */
+    cursor: pointer;
+    /* Курсор-указатель */
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+    /* Убираем обводку при фокусе */
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+    /* Убираем обводку у кнопок в Firefox */
+}
+
+label {
+    cursor: pointer;
+    /* Курсор-указатель на метках */
+}
+
+legend {
+    display: block;
+}
+
+input[type='file'] {
+    max-width: 100%;
+    /* Адаптивное поле выбора файла */
+}
+
+/* Нормализация блочной модели */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+    /* Убираем внутренние отступы у списков с классом */
+}
+
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+    /* Убираем внешние отступы у body и других тегов */
+}
+
+/* Убираем внешние отступы вертикали нужным тегам */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+    /* Убираем отступы у dd с классом */
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+    /* Убираем рамку у fieldset с классом */
+}
+
+/* Убираем стандартный маркер маркированному списку */
+:where(ul[class]) {
+    list-style: none;
+}
+
+:where(address[class]) {
+    font-style: normal;
+    /* Убираем курсив у address с классом */
+}
+
+/* Обнуляем вертикальные внешние отступы параграфа */
+p {
+    --paragraphMarginBottom: 24px;
+    /* Локальная переменная для отступа */
+    margin-block: 0;
+    /* Убираем внешние отступы */
+}
+
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+    /* Отступ для параграфа без класса */
+}
+
+/* Упрощаем работу с изображениями и видео */
+img,
+video {
+    display: block;
+    max-width: 100%;
+    /* Адаптивные изображения и видео */
+    height: auto;
+}
+
+/* Наследуем свойства шрифта для полей ввода */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+html {
+    height: 100%;
+    /* Высота страницы */
+    scrollbar-gutter: stable;
+    /* Убираем скачок интерфейса при скролле */
+}
+
+/* Плавный скролл */
+html,
+:has(:target) {
+    scroll-behavior: smooth;
+    /* Плавный переход к якорям */
+}
+
+body {
+    min-height: 100%;
+    /* Минимальная высота для body */
+    line-height: 1.5;
+    /* Унифицированный интерлиньяж */
+}
+
+/* Нормализация высоты элемента ссылки */
+a:where([class]) {
+    display: inline-flex;
+    /* Выровненные ссылки */
+}
+
+/* Курсор-рука при наведении на элемент */
+button,
+label {
+    cursor: pointer;
+}
+
+/* Приведение к единому цвету svg-элементы */
+:where([fill]:not([fill="none"],
+        [fill^="url"])) {
+    fill: currentColor;
+}
+
+:where([stroke]:not([stroke="none"],
+        [stroke^="url"])) {
+    stroke: currentColor;
+}
+
+/* Чиним баг задержки смены цвета при взаимодействии с svg-элементами */
+svg * {
+    transition-property: fill, stroke;
+    /* Плавный переход цвета */
+}
+
+/* Приведение рамок таблиц в классический 'collapse' вид */
+:where(table) {
+    border-collapse: collapse;
+    /* Убираем пробелы между ячейками */
+    border-color: currentColor;
+    /* Цвет рамки таблиц */
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        /* Отключаем анимацию */
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        /* Отключаем переходы */
+        scroll-behavior: auto !important;
+        /* Отключаем плавность скролла */
+    }
+}
