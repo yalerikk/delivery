@@ -6,6 +6,7 @@
     <title>Saveurus de Maman | Home</title>
     <!-- styles -->
     <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/stylesheet.css">
     <!-- fonts -->
     <link rel="stylesheet" href="/styles/fonts.css">
     <!-- blocks -->
@@ -14,6 +15,77 @@
     <script src="/scripts/main.js"></script>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header-logo-menu">
+            <a href="/" class="header-logo">
+                <img 
+                    class="header-logo-image"
+                    src="/images/logo/logo.svg" 
+                    alt="Saveurus Logo"
+                    width="154" height="84" loading="lazy" 
+                />
+            </a>
+            <nav class="header-menu">
+                <ul class="header-menu-list">
+                    <li class="header-menu-item header-subnav">
+                        <a href="/" class="header-menu-link">
+                            Наше меню
+                            <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon" width="36" height="36" loading="lazy" />
+                        </a>
+                        <div class="header-subnav-content">
+                            <a href="#pirog">Пироги</a>
+                            <a href="#konditerskie">Кондитерские изделия</a>
+                            <a href="#vypechka">Выпечка</a>
+                            <a href="#torty">Торты и тарты</a>
+                        </div>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="/" class="header-menu-link">
+                            Доставка
+                        </a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="/" class="header-menu-link">
+                            Контакты
+                        </a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="/" class="header-menu-link">
+                            <img 
+                                class="header-map-icon" 
+                                src="/icons/map-marker-icon.svg" 
+                                alt="Map Icon" 
+                                width="36" height="36" loading="lazy" 
+                            />
+                            Наши заведения
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-actions">
+            <div class="header-telephone-group">
+                <a href="tel:+375448389955" class="header-telephone-link">
+                    <img src="/icons/telephone-icon.svg" alt="Telephone Icon" class="header-telephone-icon" loading="lazy">
+                </a>
+                <div class="header-telephone-details">
+                    <a href="tel:+375448389955" class="header-telephone-link">
+                        <span class="header-telephone-span">+375 (44) 838-99-55</span>
+                    </a>
+                    <span class="header-hours">с 10:00 до 20:00</span>
+                </div>
+            </div>
+            <div class="header-basket-group">
+                <p class="header-basket-cost">0 byn</p>
+                <div class="basket-separator"></div>
+                <div class="header-basket-icon">
+                    <button class="button" type="header-basket-button button">
+                        <img src="/icons/shopping-bag-icon.svg" alt="Basket Icon" class="header-basket" loading="lazy">
+                    </button>
+                    <span class="basket-item-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
 </body>
 </html>
