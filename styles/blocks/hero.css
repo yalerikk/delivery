@@ -1,0 +1,12 @@
+.hero-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 130px;
+    gap: 40px;
+}
+
+.hero-title {
+    font-size: 128px;
+    color: var(--color-madder);
+}

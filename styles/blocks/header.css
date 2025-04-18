@@ -5,9 +5,7 @@
     column-gap: 65px;
     background-color: var(--color-white);
     padding: 8px 130px;
-    /* padding-top: 8px;
-    padding-bottom: 8px;
-    padding-inline: 130px; */
+    max-height: 100px;
     font-weight: 500;
 }
 
@@ -32,7 +30,7 @@
 
 .header-menu-link {
     display: inline-flex;
-    height: 100px;
+    height: 50px;
     align-items: center;
     column-gap: 30px;
     text-transform: uppercase;
@@ -50,6 +48,19 @@
 .header-menu-link:hover .header-our-menu-icon {
     transform: rotate(180deg);
     transition: var(--transition-arrow);
+}
+
+.header-telephone-icon:hover {
+    opacity: 0.8;
+}
+
+.header-burger:hover {
+    opacity: 0.7;
+}
+
+.header-basket-icon:hover .basket-item-count,
+.header-basket-icon:hover .header-basket {
+    opacity: 0.8;
 }
 
 /* ------ Subnav ------ */
@@ -138,6 +149,7 @@
 }
 
 .header-basket-icon {
+    flex-shrink: 0;
     position: relative;
 }
 
@@ -154,4 +166,123 @@
     position: absolute;
     top: 0%;
     right: -20%;
+}
+
+/* ------ Media ------ */
+
+.header-logo-min-image, 
+.header-logo-sec-image, 
+.header-burger-button {
+    display: none;
+}
+
+@media (max-width: 1435px) {
+    .header {
+        padding: 10px 50px;
+    }
+
+    .header-menu-list {
+        column-gap: 20px;
+    }
+
+    .header-logo-image {
+        display: none;
+    }
+
+    .header-logo-min-image {
+        display: flex;
+    }
+}
+
+/* Laptop */
+
+@media (max-width: 1148px) {
+    .header {
+        column-gap: 50px;
+    }
+}
+
+@media (max-width: 1133px) {
+    .header {
+        column-gap: 40px;
+        padding: 10px 30px;
+    }
+
+    .header-logo-menu {
+        column-gap: 20px;
+    }
+
+    .header-menu-list {
+        column-gap: 14px;
+    }
+
+    .header-actions {
+        column-gap: 10px;
+    }
+
+    .header-basket-group {
+        padding: 6px 10px;
+    }
+}
+
+/* --- Tablet --- */
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        column-gap: 52px;
+        height: 80px;
+    }
+
+    .header-logo-menu {
+        column-gap: 20px;
+    }
+
+    .header-menu-list {
+        justify-content: space-between;
+        width: 492px;
+    }
+
+    .header-actions {
+        column-gap: 14px;
+    }
+
+    .header-basket-group {
+        padding: 6px 14px;
+    }
+
+    .header-telephone-icon {
+        margin: 0;
+    }
+
+    .header-our-menu-icon,
+    .header-map-icon,
+    .header-telephone-details,
+    .header-basket-cost,
+    .basket-separator {
+        display: none;
+    }
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 360px) {
+    .header {
+        height: 60px;
+    }
+
+    .header-logo-menu {
+        display: none;
+    }
+
+    .header-logo-sec-image,
+    .header-burger-button {
+        display: flex;
+    }
+
+    .header-actions {
+        justify-content: space-between;
+        gap: 22px;
+        width: 100%;
+    }
 }

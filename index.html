@@ -7,6 +7,7 @@
     <!-- styles -->
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/stylesheet.css">
+    <link rel="stylesheet" href="/styles/blocks/hero.css">
     <!-- fonts -->
     <link rel="stylesheet" href="/styles/fonts.css">
     <!-- blocks -->
@@ -15,14 +16,21 @@
     <script src="/scripts/main.js"></script>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="header-logo-menu">
             <a href="/" class="header-logo">
                 <img 
+                    class="header-logo-min-image"
+                    src="/images/logo/min-logo.svg" 
+                    alt="Saveurus Logo"
+                    loading="lazy" 
+                />
+                <img 
                     class="header-logo-image"
                     src="/images/logo/logo.svg" 
                     alt="Saveurus Logo"
-                    width="154" height="84" loading="lazy" 
+                    loading="lazy" 
                 />
             </a>
             <nav class="header-menu">
@@ -30,7 +38,7 @@
                     <li class="header-menu-item header-subnav">
                         <a href="/" class="header-menu-link">
                             Наше меню
-                            <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon" width="36" height="36" loading="lazy" />
+                            <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon" loading="lazy" />
                         </a>
                         <div class="header-subnav-content">
                             <a href="#pirog">Пироги</a>
@@ -55,7 +63,7 @@
                                 class="header-map-icon" 
                                 src="/icons/map-marker-icon.svg" 
                                 alt="Map Icon" 
-                                width="36" height="36" loading="lazy" 
+                                loading="lazy" 
                             />
                             Наши заведения
                         </a>
@@ -64,6 +72,7 @@
             </nav>
         </div>
         <div class="header-actions">
+            <img class="header-logo-sec-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
             <div class="header-telephone-group">
                 <a href="tel:+375448389955" class="header-telephone-link">
                     <img src="/icons/telephone-icon.svg" alt="Telephone Icon" class="header-telephone-icon" loading="lazy">
@@ -79,13 +88,26 @@
                 <p class="header-basket-cost">0 byn</p>
                 <div class="basket-separator"></div>
                 <div class="header-basket-icon">
-                    <button class="button" type="header-basket-button button">
+                    <button class="button" type="header-basket-button">
                         <img src="/icons/shopping-bag-icon.svg" alt="Basket Icon" class="header-basket" loading="lazy">
                     </button>
                     <span class="basket-item-count">0</span>
                 </div>
             </div>
+            <button class="header-burger-button button">
+                <img src="/icons/burger-icon.svg" alt="Burger Icon" class="header-burger" loading="lazy">
+            </button>
         </div>
     </header>
+
+    <!-- Main -->
+    <!-- <main class="content">
+        <section class="hero">
+            <div class="hero-body">
+                <h1 class="hero-title">Saveurs de Maman</h1>
+                <img src="/images/hero-img.png" alt="Hero Image">
+            </div>
+        </section>
+    </main> -->
 </body>
 </html>
