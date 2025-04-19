@@ -55,14 +55,6 @@
 }
 
 @font-face {
-    font-family: 'Playfair Display';
-    src: url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Avenir Next Cyr';
     src: url('../fonts/AvenirNextCyr-Regular.woff2') format('woff2');
     font-weight: normal;
@@ -70,3 +62,10 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Playfair Display SC';
+    src: url('../fonts/PlayfairDisplaySC-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

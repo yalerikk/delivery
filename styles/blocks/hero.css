@@ -2,11 +2,149 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 130px;
+    padding: 20px 60px 20px 130px;
     gap: 40px;
+    /* width: 1250px; */
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 46px;
+    /* width: 780px; */
+}
+
+/* ------ H and Text ------ */
+
+.hero-h-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
 
 .hero-title {
-    font-size: 128px;
     color: var(--color-madder);
+    line-height: 140%;
+    font-size: clamp(128px, 8.88vw, 256px);
+}
+
+.hero-text {
+    font-size: clamp(18px, 1.25vw, 36px);
+    font-family: var(--second-family);
+}
+
+.hero-text,
+.hero-button {
+    font-weight: 400;
+}
+
+/* ------ Btn ------ */
+
+.hero-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 8px;
+    border-radius: var(--btn20-border-radius);
+    padding: var(--btn20-padding);
+    background-color: var(--color-btn20);
+}
+
+.hero-button:hover {
+    background-color: rgba(230, 140, 26, 0.6);
+}
+
+.hero-button:hover .hero-icon {
+    transform: translateX(8px);
+    transition: var(--transition-arrow);
+}
+
+/* ------ Media ------ */
+
+/* --- Tablet --- */
+
+@media (max-width: 768px) {
+    .hero-body {
+        padding: 20px 40px;
+    }
+
+    .hero-content {
+        gap: 21px;
+    }
+
+    .hero-h-text {
+        gap: 23px;
+    }
+
+    .hero-body img:not(.hero-icon) {
+        max-width: 300px;
+        max-height: 382px;
+    }
+
+    .hero-title {
+        font-size: clamp(40px, 5.2vw, 80px);
+    }
+
+    .hero-text {
+        font-size: clamp(12px, 1.56vw, 24px);
+    }
+
+    .hero-button {
+        gap: 6px;
+        border-radius: 12px;
+        padding: 6px 12px;
+        font-size: clamp(9px, 1.17vw, 18px);
+        width: 100px;
+        height: 30px;
+    }
+
+    .hero-icon {
+        width: 20px;
+        aspect-ratio: 1;
+    }
+
+    .hero-button:hover .hero-icon {
+        transform: none;
+    }
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 360px) {
+    .hero-body {
+        /* сверху, по горизонтали, снизу */
+        padding: 50px 20px 10px;
+    }
+
+    .hero-content {
+        gap: 25px;
+    }
+
+    .hero-h-text {
+        gap: 20px;
+    }
+
+    .hero-body img:not(.hero-icon) {
+        display: none;
+    }
+
+    .hero-button {
+        gap: 6px;
+        border-radius: var(--btn20-border-radius);
+        padding: 6px 10px;
+        font-size: clamp(11px, 3.05vw, 22px);
+    }
+
+    .hero-icon {
+        width: 12px;
+        aspect-ratio: 1;
+    }
+
+    .hero-button:hover .hero-icon {
+        transform: none;
+    }
 }

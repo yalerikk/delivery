@@ -156,7 +156,7 @@
 .basket-item-count {
     display: flex;
     width: 16px;
-    height: 16px;
+    aspect-ratio: 1;
     border-radius: 100%;
     color: var(--color-white);
     background-color: var(--color-dark);
