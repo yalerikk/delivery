@@ -1,0 +1,50 @@
+.cafe-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 69px 130px 49px;
+    gap: 48px;
+}
+
+.cafe-title {
+    font-size: clamp(24px, 4.44vw, 64px);
+}
+
+.cafe-map {
+    height: 415px;
+}
+
+/* ------ Media ------ */
+
+/* --- Tablet --- */
+
+@media (max-width: 768px) {
+    .cafe-body {
+        /* сверху, по горизонтали, снизу */
+        padding: 30px 40px 20px;
+        gap: 14px;
+    }
+
+    .cafe-title {
+        font-size: 30px;
+    }
+
+    .cafe-map {
+        height: 260px;
+    }
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 360px) {
+    .cafe-body {
+        /* сверху, по горизонтали, снизу */
+        padding: 30px 20px 20px;
+        gap: 14px;
+    }
+
+    .cafe-map {
+        height: 150px;
+    }
+}

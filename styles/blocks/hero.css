@@ -35,6 +35,7 @@
 .hero-text {
     font-size: clamp(18px, 1.25vw, 36px);
     font-family: var(--second-family);
+    padding-right: 86px;
 }
 
 .hero-text,
@@ -126,6 +127,10 @@
 
     .hero-h-text {
         gap: 20px;
+    }
+
+    .hero-text {
+        padding-right: 0px;
     }
 
     .hero-body img:not(.hero-icon) {
