@@ -1,0 +1,237 @@
+.delivery-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 40px 240px 90px 130px;
+    gap: 40px;
+}
+
+/* ------ Navigation and Title ------ */
+
+.delivery-navigation-name {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.delivery-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 6px;
+}
+
+/* ------ Delivery Info ------ */
+
+.delivery-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.delivery-how-to, .partners {
+    max-width: 922px;
+}
+
+.delivery-info-group, .delivery-order-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.delivery-how-to {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.how-to {
+    padding: 0px;
+    margin-right: 150px;
+}
+
+.how-to li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.how-to li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: black;
+    font-size: 18px;
+}
+
+/* ------ Partners ------ */
+
+.delivery-partners-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.partners {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 50px;
+}
+
+.logos {
+    display: flex;
+    column-gap: 70px;
+    border-radius: 8px;
+}
+
+.partner-item:hover {
+    box-shadow: var(--btn10-box-shadow);
+    border-radius: 8px;
+}
+
+/* ------ Media ------ */
+
+/* --- Tablet --- */
+
+@media (max-width: 768px) {
+    .delivery-body {
+        padding: 30px 20px 40px;
+    }
+
+    .delivery-body span {
+        font-size: 10px;
+    }
+
+    .delivery-body p,
+    .delivery-body li,
+    .delivery-body a {
+        font-size: 12px;
+    }
+
+    .delivery-body, .delivery-content, .delivery-order-info {
+        gap: 20px;
+    }
+
+    /* ------ Navigation and Title ------ */
+
+    .delivery-navigation {
+        justify-items: center;
+        gap: 6px;
+    }
+
+    .delivery-navigation-icon {
+        width: 13px;
+    }
+
+    .delivery-navigation-name {
+        gap: 8px;
+    }
+
+    /* ------ Delivery Info ------ */
+
+    .delivery-info-group, 
+    .partners {
+        gap: 22px;
+    }
+
+    .how-to, .partners {
+        margin-right: 0px;
+    }
+
+    /* ------ Partners ------ */
+
+    .delivery-partners-group {
+        gap: 30px;
+    }
+
+    .logos {
+        gap: 20px;
+    }
+
+    .partner-item-img {
+        height: 90px;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 360px) {
+    .delivery-body {
+        padding: 30px 20px 36px;
+    }
+
+    .delivery-body span {
+        font-size: 10px;
+    }
+
+    .delivery-body p, 
+    .delivery-body li,
+    .delivery-body a {
+        font-size: 12px;
+    }
+
+    .delivery-body, .delivery-content, .delivery-order-info {
+        gap: 20px;
+    }
+
+    /* ------ Navigation and Title ------ */
+
+    .delivery-navigation {
+        justify-items: center;
+        gap: 6px;
+    }
+
+    .delivery-navigation-icon {
+        width: 13px;
+    }
+
+    .delivery-navigation-name {
+        gap: 8px;
+    }
+
+    /* ------ Delivery Info ------ */
+
+    .delivery-info-group, 
+    .partners {
+        gap: 22px;
+    }
+
+    .how-to, .partners {
+        margin-right: 0px;
+    }
+
+    /* ------ Partners ------ */
+
+    .delivery-partners-group {
+        gap: 30px;
+    }
+
+    .logos {
+        gap: 20px;
+    }
+
+    .partner-item-img {
+        height: 90px;
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        overflow: hidden;
+    }
+}

@@ -7,10 +7,6 @@
     gap: 48px;
 }
 
-.cafe-title {
-    font-size: clamp(24px, 4.44vw, 64px);
-}
-
 .cafe-map {
     height: 415px;
 }
@@ -24,10 +20,6 @@
         /* сверху, по горизонтали, снизу */
         padding: 30px 40px 20px;
         gap: 14px;
-    }
-
-    .cafe-title {
-        font-size: 30px;
     }
 
     .cafe-map {

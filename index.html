@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saveurus de Maman | Home</title>
+    <title>Saveurs de Maman | Home</title>
     <!-- styles -->
     <link rel="stylesheet" href="/styles/normalize.css">
     <link rel="stylesheet" href="/styles/stylesheet.css">
@@ -12,6 +12,7 @@
     <!-- blocks -->
     <link rel="stylesheet" href="/styles/blocks/header.css">
     <link rel="stylesheet" href="/styles/blocks/hero.css">
+    <link rel="stylesheet" href="/styles/blocks/menu.css">
     <link rel="stylesheet" href="/styles/blocks/cafe.css">
     <!-- scripts -->
     <script src="/scripts/main.js"></script>
@@ -37,29 +38,29 @@
             <nav class="header-menu">
                 <ul class="header-menu-list">
                     <li class="header-menu-item header-subnav">
-                        <a href="/" class="header-menu-link">
+                        <a href="#our-menu" class="header-menu-link">
                             Наше меню
                             <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon" loading="lazy" />
                         </a>
                         <div class="header-subnav-content">
-                            <a href="#pirog">Пироги</a>
+                            <a href="#pirogi">Пироги</a>
                             <a href="#konditerskie">Кондитерские изделия</a>
                             <a href="#vypechka">Выпечка</a>
                             <a href="#torty">Торты и тарты</a>
                         </div>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/" class="header-menu-link">
+                        <a href="/delivery.html" class="header-menu-link">
                             Доставка
                         </a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/" class="header-menu-link">
+                        <a href="#footer" class="header-menu-link">
                             Контакты
                         </a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/" class="header-menu-link">
+                        <a href="#cafe" class="header-menu-link">
                             <img 
                                 class="header-map-icon" 
                                 src="/icons/map-marker-icon.svg" 
@@ -73,7 +74,9 @@
             </nav>
         </div>
         <div class="header-actions">
-            <img class="header-logo-sec-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
+            <a href="/" class="header-logo">
+                <img class="header-logo-sec-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
+            </a>
             <div class="header-telephone-group">
                 <a href="tel:+375448389955" class="header-telephone-link">
                     <img src="/icons/telephone-icon.svg" alt="Telephone Icon" class="header-telephone-icon" loading="lazy">
@@ -106,7 +109,7 @@
     <!-- Main -->
     <main class="content">
         <!-- Hero Section -->
-        <section class="hero">
+        <section id="#hero" class="hero">
             <div class="hero-body">
                 <div class="hero-content">
                     <div class="hero-h-text">
@@ -127,18 +130,70 @@
         </section>
 
         <!-- Our menu Section -->
+        <section id="our-menu" class="our-menu">
+            <div class="our-menu-body">
+                <h2 class="our-menu-title">Наше меню</h2>
+                <!-- category -->
+                <div class="our-menu-catalog">
+                    <!-- BEGIN Catalog Item -->
+                    <a href="pirogi" class="catalog-item">
+                        <div class="catalog-item-content">
+                            <img src="/images/category/pirogi-img.png" alt="Saveurs de Maman | Пироги" class="catalog-item-img">
+                            <div class="catalog-item-text">Пироги</div>
+                        </div>
+                    </a>
+                    <!-- END Catalog Item -->
+                
+                    <!-- BEGIN Catalog Item -->
+                    <a href="konditerskie" class="catalog-item">
+                        <div class="catalog-item-content">
+                            <img src="/images/category/konditerskie-img.png" alt="Saveurs de Maman | Кондитерские изделия"
+                                class="catalog-item-img">
+                            <div class="catalog-item-text">Кондитерские изделия</div>
+                        </div>
+                    </a>
+                    <!-- END Catalog Item -->
+                
+                    <!-- BEGIN Catalog Item -->
+                    <a href="vypechka" class="catalog-item">
+                        <div class="catalog-item-content">
+                            <img src="/images/category/vypechka-img.png" alt="Saveurs de Maman | Выпечка" class="catalog-item-img">
+                            <div class="catalog-item-text">Выпечка</div>
+                        </div>
+                    </a>
+                    <!-- END Catalog Item -->
+                
+                    <!-- BEGIN Catalog Item -->
+                    <a href="torty" class="catalog-item">
+                        <div class="catalog-item-content">
+                            <img src="/images/category/torty-img.png" alt="Saveurs de Maman | Торты" class="catalog-item-img">
+                            <div class="catalog-item-text">Торты и тарты</div>
+                        </div>
+                    </a>
+                    <!-- END Catalog Item -->
+                </div>
+                <!-- delivery -->
+                <div class="our-menu-delivery-group">
+                    <p class="delivery-row">Покупайте вкусную, свежую, ароматную выпечку и кондитерские изделия в Минске в «Saveurs de Maman».</p>
+                    <a href="/" class="delivery-button button">
+                        Доставка
+                        <img src="/icons/delivery-parcel-icon.svg" alt="Delivery Icon" class="delivery-icon" loading="lazy">
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- Set Section -->
 
         <!-- Category Section -->
 
         <!-- Cafe Section -->
-        <section class="cafe">
+        <section id="cafe" class="cafe">
             <div class="cafe-body">
                 <h2 class="cafe-title">Наши заведения</h2>
                 <div class="cafe-map">
                     <script type="text/javascript" charset="utf-8" async
-                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76e81f6af76fe89dccdfc7ff122b624f17002ef0553db7983621e5ee8dbae621&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0f0e47eab0713ab421cc7400faab66cf124f25b96d3c968d3273a555cebfc7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
                 </div>
             </div>
         </section>
