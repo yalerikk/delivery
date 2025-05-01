@@ -185,11 +185,11 @@
         column-gap: 20px;
     }
 
-    .header-logo-image {
+    .header-logo-min-image {
         display: none;
     }
 
-    .header-logo-min-image {
+    .header-logo-image {
         display: flex;
     }
 }
@@ -255,12 +255,17 @@
         margin: 0;
     }
 
+    .header-logo-image,
     .header-our-menu-icon,
     .header-map-icon,
     .header-telephone-details,
     .header-basket-cost,
     .basket-separator {
         display: none;
+    }
+
+    .header-logo-min-image {
+        display: flex;
     }
 }
 

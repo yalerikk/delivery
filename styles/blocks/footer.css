@@ -1,0 +1,252 @@
+.footer-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 130px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+}
+
+.footer-sections-list a:hover, 
+.footer-category-list a:hover,
+.footer-telephone-span:hover {
+    color: var(--color-champagne);
+}
+
+/* ------ Logo and Menu ------ */
+
+.footer-logo-menu {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.footer-navs-icons, 
+.footer-navs {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-sections,
+.footer-category {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footer-sections-list,
+.footer-category-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.footer-category-list {
+    font-size: 14px;
+}
+
+/* --- Icons --- */
+
+.footer-icons {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.footer-icons a:hover img {
+    transition: var(--transition-duration);
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+
+/* ------ Telephone and C ------ */
+
+.footer-telephone-c {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer-tel-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.footer-telephone-span {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.footer-hours {
+    text-align: right;
+    font-weight: 500;
+}
+
+.footer-telephone-c p {
+    font-size: 12px;
+    text-align: right;
+    opacity: 0.7;
+}
+
+/* ------ Media ------ */
+
+.footer-logo-min-image,
+.footer-icons .footer-telephone-link,
+.footer-menu-header,
+.footer-category-header {
+    display: none;
+}
+
+/* --- Tablet --- */
+
+@media (max-width: 768px) {
+    .footer-body {
+        padding: 23px 22px;
+    }
+
+    /* ------ Logo ------ */
+    .footer-logo-image {
+        display: none;
+    }    
+    .footer-logo-min-image {
+        display: flex;
+    }
+
+    /* ------ Menu ------ */
+    .footer-logo-menu {
+        gap: 20px;
+    }
+
+    .footer-navs-icons {
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    
+    .footer-navs-icons,
+    .footer-navs {
+        gap: 12px;
+    }
+
+    .footer-sections-list,
+    .footer-category-list {
+        gap: 20px;
+    }
+
+    /* ------ Telephone and C ------ */
+
+    .footer-telephone-c {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .footer-telephone-span {
+        font-size: 16px;
+    }
+
+    .footer-hours {
+        font-size: 12px;
+    }
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 360px) {
+    .footer-body {
+        flex-direction: column;
+        padding: 14px 30px;
+        gap: 18px;
+    }
+
+    /* ------ Display Settings ------ */
+
+    .footer-menu-header,
+    .footer-category-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* --- Logo --- */
+    .footer-logo-image {
+        display: none;
+    }    
+    .footer-logo-min-image {
+        display: flex;
+    }
+
+    /* ------ Menu ------ */
+
+    .footer-logo-menu {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .footer-navs {
+        gap: 10px;
+    }
+
+    .footer-navs-icons {
+        gap: 18px;
+    }
+
+    .footer-sections-list,
+    .footer-category-list {
+        display: none;
+        font-size: 12px;
+        padding-top: 14px;
+    }
+
+    .footer-sections-list li,
+    .footer-category-list li {
+        padding-bottom: 5px;
+        font-weight: 300;
+    }
+
+    .footer-menu-wrapper.open .footer-sections-list,
+    .footer-category-wrapper.open .footer-category-list {
+        display: block;
+    }
+
+    /* ------ Telephone and C ------ */
+
+    .footer-navs-icons, 
+    .footer-telephone-c {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .footer-telephone-icon, 
+    .footer-instagram-icon, 
+    .footer-telegram-icon {
+        width: 22px;
+        aspect-ratio: 1;
+    }
+
+    .footer-icons .footer-telephone-link {
+        display: flex;
+    }
+
+    .footer-tel-info {
+        display: none;
+    }
+    
+    .footer-telephone-c p {
+        text-align: start;
+    }
+}
