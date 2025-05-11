@@ -1,0 +1,16 @@
+.set-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 70px 90px 90px 130px;
+    gap: 40px;
+}
+
+/* overflow-x: auto */
+
+.set-list {
+    display: grid;
+    grid-template-columns: repeat(3, 378px);
+    gap: 24px;
+}

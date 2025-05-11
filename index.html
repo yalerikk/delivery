@@ -11,30 +11,23 @@
     <link rel="stylesheet" href="/styles/fonts.css">
     <!-- blocks -->
     <link rel="stylesheet" href="/styles/blocks/header.css">
+    <link rel="stylesheet" href="/styles/blocks/basket.css">
+    <!-- --- main --- -->
     <link rel="stylesheet" href="/styles/blocks/hero.css">
     <link rel="stylesheet" href="/styles/blocks/menu.css">
+    <link rel="stylesheet" href="/styles/blocks/set.css">
+    <link rel="stylesheet" href="/styles/blocks/category.css">
     <link rel="stylesheet" href="/styles/blocks/cafe.css">
+    <!-- --- main --- -->
     <link rel="stylesheet" href="/styles/blocks/footer.css">
-    <!-- scripts -->
-    <script src="/scripts/main.js"></script>
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="header-logo-menu">
             <a href="/" class="header-logo">
-                <img 
-                    class="header-logo-min-image"
-                    src="/images/logo/min-logo.svg" 
-                    alt="Saveurus Logo"
-                    loading="lazy" 
-                />
-                <img 
-                    class="header-logo-image"
-                    src="/images/logo/logo.svg" 
-                    alt="Saveurus Logo"
-                    loading="lazy" 
-                />
+                <img class="header-logo-min-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
+                <img class="header-logo-image" src="/images/logo/logo.svg" alt="Saveurus Logo" loading="lazy" />
             </a>
             <nav class="header-menu">
                 <ul class="header-menu-list">
@@ -51,23 +44,14 @@
                         </div>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/delivery.html" class="header-menu-link">
-                            Доставка
-                        </a>
+                        <a href="/delivery.html" class="header-menu-link">Доставка</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="#footer" class="header-menu-link">
-                            Контакты
-                        </a>
+                        <a href="#footer" class="header-menu-link">Контакты</a>
                     </li>
                     <li class="header-menu-item">
                         <a href="#cafe" class="header-menu-link">
-                            <img 
-                                class="header-map-icon" 
-                                src="/icons/map-marker-icon.svg" 
-                                alt="Map Icon" 
-                                loading="lazy" 
-                            />
+                            <img class="header-map-icon" src="/icons/map-marker-icon.svg" alt="Map Icon" loading="lazy" />
                             Наши заведения
                         </a>
                     </li>
@@ -90,7 +74,10 @@
                 </div>
             </div>
             <div class="header-basket-group">
-                <p class="header-basket-cost">0 byn</p>
+                <p class="header-basket-cost">
+                    <span class="basket-cost">0</span>
+                    <span class="header-basket-byn"> byn</span>
+                </p>
                 <div class="basket-separator"></div>
                 <div class="header-basket-icon">
                     <button class="header-basket-button" type="button" title="Open basket">
@@ -100,15 +87,48 @@
                     <span class="basket-item-count">0</span>
                 </div>
             </div>
-            <button class="header-burger-button button" type="button" title="Open menu">
-                        <span class="visually-hidden">Open menu</span>
+            <button class="header-burger-button" type="button" title="Open menu">
+                <span class="visually-hidden">Open menu</span>
                 <img src="/icons/burger-icon.svg" alt="Burger Icon" class="header-burger" loading="lazy">
             </button>
         </div>
     </header>
 
+    <div class="overlay"></div>
+
     <!-- Main -->
     <main class="content">
+        <!-- Basket -->
+        <section id="basket" class="basket-popup">
+            <div class="basket-body">
+               <div class="basket-content empty" style="display: none;">
+                    <img src="/images/empty-basket.png" alt="Empty Basket" width="250px" height="189px" loading="lazy"/>
+                    <div class="basket-summary">
+                        <p>Сумма заказа: 
+                            <span class="total-amount">0</span>
+                            <span class="byn"> byn</span>
+                        </p>
+                        <button class="basket-button">Заказать</button>
+                    </div>
+                </div>
+                <div class="basket-content filled" style="display: none;">
+                    <div class="order-wrap-list">
+                        <ul class="order-list" id="order-list">
+                            <!-- Здесь будет отрисовываться список заказанных товаров -->
+                        </ul>
+                    </div>
+                    <!-- Summary -->
+                    <div class="basket-summary">
+                        <p>Сумма заказа:
+                            <span class="total-amount">0</span>
+                            <span class="byn"> byn</span>
+                        </p>
+                        <button class="basket-button">Оформить заказ</button>
+                    </div>
+                </div> 
+            </div>
+        </section>
+        
         <!-- Hero Section -->
         <section id="#hero" class="hero">
             <div class="hero-body">
@@ -185,16 +205,59 @@
         </section>
 
         <!-- Set Section -->
+        <section id="set" class="set">
+            <div class="set-body">
+                <h2 class="set-title">Сеты</h2>
+                <!-- List -->
+                <div class="set-wrapper">
+                    <div class="set-wrap-list">
+                        <ul class="set-list" id="set-list">
+                            <!-- Отрисовка карточек будет производится в JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Category Section -->
+        <section id="category" class="category">
+            <div class="category-body">
+                <h2 class="category-title">Категории</h2>
+                <!-- Filters -->
+                <nav class="category-filter-menu">
+                    <ul class="filter-list">
+                        <li class="filter-item">
+                            <button class="filter-btn filter-btn-pirogi filter-btn-active">Пироги</button>
+                        </li>
+                        <li class="filter-item">
+                            <button class="filter-btn filter-btn-konditerskie">Кондитерские изделия</button>
+                        </li>
+                        <li class="filter-item">
+                            <button class="filter-btn filter-btn-vypechka">Выпечка</button>
+                        </li>
+                        <li class="filter-item">
+                            <button class="filter-btn filter-btn-torty">Торты и тарты</button>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- List -->
+                <div class="catalog-wrapper">
+                    <div class="catalog-wrap-list">
+                        <ul class="catalog-list" id="catalog-list">
+                            <!-- Отрисовка карточек будет производится в JS -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Cafe Section -->
         <section id="cafe" class="cafe">
             <div class="cafe-body">
                 <h2 class="cafe-title">Наши заведения</h2>
                 <div class="cafe-map">
-                    <script type="text/javascript" charset="utf-8" async
-                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0f0e47eab0713ab421cc7400faab66cf124f25b96d3c968d3273a555cebfc7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+                    <!-- <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A1a0f0e47eab0713ab421cc7400faab66cf124f25b96d3c968d3273a555cebfc7&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script> -->
                 </div>
             </div>
         </section>
@@ -312,5 +375,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- scripts -->
+    <script src="/scripts/renderProducts.js"></script>
+    <script src="/scripts/cartStatus.js"></script>
+    <script src="/scripts/counter.js"></script>
+    <script src="/scripts/basket.js"></script>
+
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

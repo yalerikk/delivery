@@ -14,6 +14,7 @@
     --color-madder: #A0041E;
     --color-white-smoke: #F5F5F5;
     --color-btn20: rgba(230, 140, 26, 0.7);
+    --color-madder-hover: rgba(160, 4, 30, 0.9);
 
     /* special text style, counters */
     --color-silver: #B7B7B7;
@@ -72,6 +73,7 @@ body {
     line-height: 1.5;
     color: var(--color-dark);
     background-color: var(--color-floral-white);
+    overflow-x: hidden;
 }
 
 .container {

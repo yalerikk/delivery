@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "Пирог Apple",
+        "description": "Фирменное тесто, сочное зеленое яблоко с душистой корицей и шариками пломбира",
+        "parameter": "1000 г.",
+        "price": 42,
+        "type": "pirogi",
+        "image": "apple-pie.png"
+    },
+    {
+        "id": 2,
+        "title": "Пирог Cherry",
+        "description": "Фирменное тесто, спелая пряная вишня с нотками гвоздики и миндальной стружкой",
+        "parameter": "1000 г.",
+        "price": 49,
+        "type": "pirogi",
+        "image": "cherry-pie.png"
+    },
+    {
+        "id": 3,
+        "title": "Киш Blueberry",
+        "description": "Песочное тесто, лесная черника со сливками",
+        "parameter": "1000 г.",
+        "price": 60,
+        "type": "pirogi",
+        "image": "blueberry-pie.png"
+    },
+    {
+        "id": 4,
+        "title": "Пирог Burger",
+        "description": "Закрытый пирог-бургер с фаршем из говядины и свинины, луком, грибами, маринованным огурчиком",
+        "parameter": "1000 г.",
+        "price": 56,
+        "type": "pirogi",
+        "image": "burger.png"
+    },
+    {
+        "id": 5,
+        "title": "Сет Фисташка",
+        "description": "Макарон Фисташка с малиной",
+        "parameter": "8 штук",
+        "price": 40,
+        "type": "sety",
+        "image": "fistashka.png"
+    },
+    {
+        "id": 6,
+        "title": "Комбо Barbie",
+        "description": "Макарон Loli с сублимированной клубникой; Макарон Helga со вкусом малинового пломбира",
+        "parameter": "12 штук",
+        "price": 59,
+        "type": "sety",
+        "image": "barbie.png"
+    },
+    {
+        "id": 7,
+        "title": "Сет Oreo",
+        "description": "Макарон Oreo",
+        "parameter": "8 штук",
+        "price": 46,
+        "type": "sety",
+        "image": "oreo.png"
+    }
+]

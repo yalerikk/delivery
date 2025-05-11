@@ -1,0 +1,245 @@
+.category-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 70px 130px 10px;
+    background-color: var(--color-champagne);
+}
+
+/* ------ Filters ------ */
+.category-filter-menu {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--third-family);
+    font-size: 14px;
+    font-weight: 700;
+    margin: 30px 0px;
+    padding: 15px 30px;
+    background-color: var(--color-white);
+    border-radius: var(--btn20-border-radius);
+}
+
+.filter-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-btn {
+    border-radius: var(--btn10-border-radius);
+    padding: 18px 20px 18px 52px;
+    white-space: nowrap;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: 20px center;
+    background-color: transparent;
+}
+
+.filter-btn-active {
+    pointer-events: none;
+    background-color: var(--color-madder);
+    color: var(--color-white);
+}
+
+.filter-btn-active:focus {
+    outline: none;
+}
+
+.filter-btn:hover:not(.filter-btn-active),
+.filter-btn:focus-visible:not(.filter-btn-active) {
+    outline: 1px solid var(--color-madder);
+    outline-offset: 0px;
+}
+
+@supports not selector(:focus-visible){
+    .filter-btn:focus {
+        outline: 1px solid var(--color-madder);
+        outline-offset: 1px;
+    }
+}
+
+/* --- Btns --- */
+.filter-btn-pirogi {
+    background-image: url(/icons/pie-icon.svg);
+}
+.filter-btn-pirogi.filter-btn-active {
+    background-image: url(/icons/pie-icon-light.svg);
+}
+
+.filter-btn-konditerskie {
+    background-image: url(/icons/cookie-icon.svg);
+}
+.filter-btn-konditerskie.filter-btn-active {
+    background-image: url(/icons/cookie-icon-light.svg);
+}
+
+.filter-btn-vypechka {
+    background-image: url(/icons/bread-icon.svg);
+}
+.filter-btn-vypechka.filter-btn-active {
+    background-image: url(/icons/bread-icon-light.svg);
+}
+
+.filter-btn-torty {
+    background-image: url(/icons/shortcake-icon.svg);
+}
+.filter-btn-torty.filter-btn-active {
+    background-image: url(/icons/shortcake-icon-light.svg);
+}
+
+/* ------ List ------ */
+
+.catalog-wrapper {
+    margin-bottom: 45px;
+}
+
+.catalog-wrapper p+p {
+    margin-top: 0;
+}
+
+.catalog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 378px);
+    gap: 24px;
+}
+
+.catalog-item {
+    background-color: var(--color-white);
+    
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 28px 22px 20px 22px;
+    gap: 23px;
+}
+
+.item-product {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    column-gap: 4px;
+}
+
+.item-product-parameter {
+    color: var(--color-silver);
+}
+
+.item-product-title {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.item-product-parameter, 
+.item-product-description {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.item-product-description {
+    height: 42px;
+    max-height: 42px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.item-product-summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.item-product-price {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.item-product-summary .item-product-order-btn {
+    margin-top: 5px;
+}
+
+.item-product-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: var(--btn4-padding);
+    border-radius: var(--btn4-border-radius);
+    background-color: var(--color-madder);
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.item-product-order-btn:hover {
+    background-color: var(--color-madder-hover);
+}
+
+/* ------ Pagination ------ */
+
+
+/* ------ Media ------ */
+
+/* --- Tablet --- */
+
+@media (max-width: 768px) {
+    .category-body {
+        padding: 50px 40px 30px 40px;
+        justify-content: space-between;
+    }
+
+    /* ------ Filters ------ */
+
+    .category-filter-menu {
+        padding: 10px 12px;
+    }
+
+    .filter-btn {
+        padding: 14px 20px 14px 52px;
+    }
+    
+    /* ------ List ------ */
+
+    /* ------ Pagination ------ */
+
+}
+
+/* --- Mobile --- */
+
+@media (max-width: 360px) {
+    .category-body {
+        padding: 30px 20px 20px;
+    }
+
+    /* ------ Filters ------ */
+
+    .category-filter-menu {
+        padding: 10px 12px;
+    }
+
+    .filter-btn {
+        padding: 8px 10px 8px 34px;
+        background-size: 20px;
+        background-position: 10px center;
+    }
+
+    .filter-btn:not(.filter-btn-active) {
+        padding: 8px 10px 8px 28px;
+        color: transparent; /* Скрываем текст */
+        text-indent: -9999px; /* Сдвигаем текст за пределы видимости */
+    }
+    
+    /* ------ List ------ */
+
+
+
+    /* ------ Pagination ------ */
+    
+    
+
+}
