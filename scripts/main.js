@@ -30,27 +30,40 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const basketButton = document.querySelector(".header-basket-button");
   const basketPopup = document.getElementById("basket");
-  const emptyBasketContent = basketPopup.querySelector(".basket-content.empty");
-  const filledBasketContent = basketPopup.querySelector(
-    ".basket-content.filled"
-  );
+  const emptyBasketContent = document.querySelector(".basket-content.empty");
+  const filledBasketContent = document.querySelector(".basket-content.filled");
+
+  // Определяем, на какой странице мы находимся
+  const isCartPage = window.location.pathname.includes("cartpage.html");
 
   basketButton.addEventListener("click", function (event) {
     event.stopPropagation();
     toggleBasketDisplay();
   });
 
-  // Закрытие корзины при клике вне её области
-  document.addEventListener("click", function (event) {
-    if (!basketPopup.contains(event.target)) {
-      hideAllBaskets(emptyBasketContent, filledBasketContent);
-    }
-  });
+  if (!isCartPage) {
+    // Закрытие корзины при клике вне её области
+    document.addEventListener("click", function (event) {
+      if (!basketPopup.contains(event.target)) {
+        hideAllBaskets(emptyBasketContent, filledBasketContent);
+      }
+    });
+  }
 
   // Добавление ссылки на раздел сайта
-  const orderButton = emptyBasketContent.querySelector(".basket-button");
+  const fakeOrderButton = emptyBasketContent.querySelector(".basket-button");
+  fakeOrderButton.addEventListener("click", function (event) {
+    location.href = "/#set"; // Переход к разделу "set"
+  });
+
+  // Добавление ссылки на страницу оформления заказа
+  const orderButton = filledBasketContent.querySelector(".basket-button");
   orderButton.addEventListener("click", function (event) {
-    location.href = "#set"; // Переход к разделу "set"
+    if (!isCartPage) {
+      location.href = "/cartpage.html"; // Переход
+    } else {
+      location.href = "#order-form";
+    }
   });
 
   function toggleBasketDisplay() {

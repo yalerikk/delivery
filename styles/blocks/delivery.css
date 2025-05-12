@@ -108,7 +108,7 @@
 
 @media (max-width: 768px) {
     .delivery-body {
-        padding: 30px 20px 40px;
+        padding: 50px 40px 30px 40px;
     }
 
     .delivery-body span {

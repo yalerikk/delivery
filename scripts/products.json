@@ -61,5 +61,158 @@
         "price": 46,
         "type": "sety",
         "image": "oreo.png"
+    },
+    {
+        "id": 8,
+        "title": "Сет Chocolate",
+        "description": "Макарон Chocolate",
+        "parameter": "8 штук",
+        "price": 44,
+        "type": "sety",
+        "image": "chocolate.png"
+    },
+    {
+        "id": 9,
+        "title": "Сет Vanilla",
+        "description": "Макарон Vanilla",
+        "parameter": "12 штук",
+        "price": 54,
+        "type": "sety",
+        "image": "vanilla-macaron.png"
+    },
+    {
+        "id": 10,
+        "title": "Круассан с беконом",
+        "description": "Круассан с беконом и яйцом",
+        "parameter": "120 г.",
+        "price": 8,
+        "type": "vypechka",
+        "image": "bacon-egg-cruasan.png"
+    },
+    {
+        "id": 11,
+        "title": "Круассан с ветчиной",
+        "description": "Круассан с ветчиной и сыром",
+        "parameter": "110 г.",
+        "price": 7,
+        "type": "vypechka",
+        "image": "meat-cheese-cruasan.png"
+    },
+    {
+        "id": 12,
+        "title": "Торт Blue",
+        "description": "Торт Blue с ежевикой, голубикой и черникой",
+        "parameter": "520 г.",
+        "price": 28,
+        "type": "torty",
+        "image": "blue-cake.png"
+    },
+    {
+        "id": 13,
+        "title": "Торт Chocolate",
+        "description": "Торт Chocolate для любителей шоколада",
+        "parameter": "530 г.",
+        "price": 27,
+        "type": "torty",
+        "image": "chocolate-cake.png"
+    },
+    {
+        "id": 14,
+        "title": "Набор печенья Chocolate",
+        "description": "Набор печенья Chocolate с шоколадной крошкой",
+        "parameter": "8 штук",
+        "price": 18,
+        "type": "konditerskie",
+        "image": "chocolate-cookie.png"
+    },
+    {
+        "id": 15,
+        "title": "Круассан Chocolate",
+        "description": "Круассан Chocolate с нежным шокладным вкусом",
+        "parameter": "100 г.",
+        "price": 6,
+        "type": "vypechka",
+        "image": "chocolate-cruasan.png"
+    },
+    {
+        "id": 16,
+        "title": "Эклер Chocolate",
+        "description": "Эклер Chocolate с нежной шоколадной глазурью и взбитыми сливками, украшенный сахарной пудрой",
+        "parameter": "80 г.",
+        "price": 6,
+        "type": "konditerskie",
+        "image": "chocolate-ecler.png"
+    },
+    {
+        "id": 17,
+        "title": "Эклер Фисташка",
+        "description": "Эклер Фисташка с ореховой посыпкой",
+        "parameter": "75 г.",
+        "price": 7,
+        "type": "konditerskie",
+        "image": "fistashka-ecler.png"
+    },
+    {
+        "id": 18,
+        "title": "Сет Ocean",
+        "description": "Сет Ocean состоит из десертов в виде ракушек из молочного шоколада и морского секрета",
+        "parameter": "8 штук",
+        "price": 17,
+        "type": "konditerskie",
+        "image": "shells.png"
+    },
+    {
+        "id": 19,
+        "title": "Круассан Strawberry",
+        "description": "Круассан Strawberry, украшен шариком клубничного мороженого, с кусочками свежей клубники",
+        "parameter": "100 г.",
+        "price": 16,
+        "type": "vypechka",
+        "image": "strawberry-cruasan.png"
+    },
+    {
+        "id": 20,
+        "title": "Круассан Vanilla",
+        "description": "Круассан Vanilla, украшен шариком ванильного мороженого, с карамельным сиропом и орешками",
+        "parameter": "100 г.",
+        "price": 14,
+        "type": "vypechka",
+        "image": "vanilla-cruasan.png"
+    },
+    {
+        "id": 21,
+        "title": "Эклер Strawberry",
+        "description": "Эклер Strawberry с нежными кусочками свежей клубники и взбитыми сливками",
+        "parameter": "80 г.",
+        "price": 6,
+        "type": "konditerskie",
+        "image": "strawberry-ecler.png"
+    },
+    {
+        "id": 22,
+        "title": "Торт Snikers",
+        "description": "Торт Snikers для поклонников одноименного шоколадного батончика",
+        "parameter": "530 г.",
+        "price": 27,
+        "type": "torty",
+        "image": "snikers-cake.png"
+    },
+    {
+        "id": 23,
+        "title": "Торт Tiramisu",
+        "description": "Торт Tiramisu для любителей нежного десерта",
+        "parameter": "510 г.",
+        "price": 26,
+        "type": "torty",
+        "image": "tiramisu.png"
+    },
+    {
+        "id": 24,
+        "title": "Торт Wild Berries",
+        "description": "Торт Wild Berries для любителей свежих ягод: малина и ежевика с мягким ягодным кремом",
+        "parameter": "500 г.",
+        "price": 25,
+        "type": "torty",
+        "image": "wild-berries-cake.png"
     }
 ]

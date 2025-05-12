@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saveurs de Maman | Cartpage</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/styles/normalize.css">
+    <link rel="stylesheet" href="/styles/stylesheet.css">
+    <!-- fonts -->
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <!-- blocks -->
+    <link rel="stylesheet" href="/styles/blocks/header.css">
+    <link rel="stylesheet" href="/styles/blocks/basket.css">
+    <!-- --- main --- -->
+    <link rel="stylesheet" href="/styles/blocks/cartPage.css">
+    <!-- --- main --- -->
+    <link rel="stylesheet" href="/styles/blocks/footer.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo-menu">
+            <a href="/" class="header-logo">
+                <img class="header-logo-min-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
+                <img class="header-logo-image" src="/images/logo/logo.svg" alt="Saveurus Logo" loading="lazy" />
+            </a>
+            <nav class="header-menu">
+                <ul class="header-menu-list">
+                    <li class="header-menu-item header-subnav">
+                        <a href="#our-menu" class="header-menu-link">
+                            Наше меню
+                            <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon"
+                                loading="lazy" />
+                        </a>
+                        <div class="header-subnav-content">
+                            <a href="#pirogi">Пироги</a>
+                            <a href="#konditerskie">Кондитерские изделия</a>
+                            <a href="#vypechka">Выпечка</a>
+                            <a href="#torty">Торты и тарты</a>
+                        </div>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="/delivery.html" class="header-menu-link">Доставка</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#footer" class="header-menu-link">Контакты</a>
+                    </li>
+                    <li class="header-menu-item">
+                        <a href="#cafe" class="header-menu-link">
+                            <img class="header-map-icon" src="/icons/map-marker-icon.svg" alt="Map Icon"
+                                loading="lazy" />
+                            Наши заведения
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-actions">
+            <a href="/" class="header-logo">
+                <img class="header-logo-sec-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
+            </a>
+            <div class="header-telephone-group">
+                <a href="tel:+375448389955" class="header-telephone-link">
+                    <img src="/icons/telephone-icon.svg" alt="Telephone Icon" class="header-telephone-icon"
+                        loading="lazy">
+                </a>
+                <div class="header-telephone-details">
+                    <a href="tel:+375448389955" class="header-telephone-link">
+                        <span class="header-telephone-span">+375 (44) 838-99-55</span>
+                    </a>
+                    <span class="header-hours">с 10:00 до 20:00</span>
+                </div>
+            </div>
+            <div class="header-basket-group">
+                <p class="header-basket-cost">
+                    <span class="basket-cost">0</span>
+                    <span class="header-basket-byn"> byn</span>
+                </p>
+                <div class="basket-separator"></div>
+                <div class="header-basket-icon">
+                    <button class="header-basket-button" type="button" title="Open basket">
+                        <span class="visually-hidden">Open basket</span>
+                        <img src="/icons/shopping-bag-icon.svg" alt="Basket Icon" class="header-basket" loading="lazy">
+                    </button>
+                    <span class="basket-item-count">0</span>
+                </div>
+            </div>
+            <button class="header-burger-button" type="button" title="Open menu">
+                <span class="visually-hidden">Open menu</span>
+                <img src="/icons/burger-icon.svg" alt="Burger Icon" class="header-burger" loading="lazy">
+            </button>
+        </div>
+    </header>
+
+    <div class="overlay"></div>
+
+    <!-- Main -->
+    <main class="content">
+        <!-- Real Basket -->
+        <section class="cartpage">
+            <div class="cartpage-body">
+                <h2 class="cartpage-title">Оформление заказа</h2>
+                <div class="cartpage-content">
+                    <!-- Basket -->
+                    <div class="cartpage-basket-body">
+                        <div class="basket-content empty" style="display: none;">
+                            <img src="/images/empty-basket.png" alt="Empty Basket" width="250px" height="189px" loading="lazy" />
+                            <div class="basket-summary">
+                                <p>Сумма заказа:
+                                    <span class="total-amount">0</span>
+                                    <span class="byn"> byn</span>
+                                </p>
+                                <button class="basket-button">Заказать</button>
+                            </div>
+                        </div>
+                        <div class="basket-content filled" style="display: none;">
+                            <div class="order-wrap-list">
+                                <ul class="order-list" id="order-list">
+                                    <!-- Здесь будет отрисовываться список заказанных товаров -->
+                                </ul>
+                            </div>
+                            <!-- Summary -->
+                            <div class="basket-summary">
+                                <p>Сумма заказа:
+                                    <span class="total-amount">0</span>
+                                    <span class="byn"> byn</span>
+                                </p>
+                                <button class="basket-button">Оформить заказ</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Order Form -->
+                    <form class="order-form" id="order-form">
+                        <!-- Contact -->
+                        <div class="order-form-contact order-form-data">
+                            <div class="order-form-data-type">
+                                <span class="order-form-num">1</span>
+                                <p class="order-form-h">Контактные данные</p>
+                            </div>
+                            <div class="order-form-input">
+                                <input id="input-name" type="text" placeholder="Ваше Имя" required>
+                                <input id="input-phone" type="tel" placeholder="Ваш телефон" required>
+                            </div>
+                        </div>
+                        <!-- Adres -->
+                        <div class="order-form-adres order-form-data">
+                            <div class="order-form-data-type">
+                                <span class="order-form-num">2</span>
+                                <p class="order-form-h">Адрес</p>
+                            </div>
+                            <div class="order-form-input">
+                                <input id="input-street" type="text" placeholder="Улица" required>
+                                <input class="input-house" id="input-house" type="text" placeholder="Дом" required>
+                                <input class="input-floor" id="input-floor" type="text" placeholder="Квартира" required>
+                                <input class="input-other" id="input-other" type="text" placeholder="Подъезд/Этаж/Домофон">
+                            </div>
+                            <div class="order-method">
+                                <p>Доставка.</p>
+                                <button class="order-method-btn">Самовызов по телефону!</button>
+                            </div>
+                        </div>
+                        <!-- Payment -->
+                        <div class="order-form-payment order-form-data">
+                            <div class="order-form-data-type">
+                                <span class="order-form-num">3</span>
+                                <p class="order-form-h">Способ оплаты</p>
+                            </div>
+                            <div class="order-form-input">
+                                <div class="payment-method">
+                                    <label class="radio-custom">
+                                        <input type="radio" name="payment" value="cash" required checked>
+                                        Наличные
+                                    </label>
+                                    <label class="radio-custom">
+                                        <input type="radio" name="payment" value="card" required>
+                                        Карта
+                                    </label>
+                                </div>
+                                <input id="input-cost" type="number" placeholder="С какой суммы подготовить сдачу?" style="display: block;"/>
+                            </div>
+                        </div>
+                        <!-- Summary -->
+                        <div class="basket-summary">
+                            <p>Сумма заказа:
+                                <span class="total-amount">0</span>
+                                <span class="byn"> byn</span>
+                            </p>
+                            <button class="basket-button">Оформить заказ</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+        
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+            <div class="footer-body">
+                <!-- Logo and Menu -->
+                <div class="footer-logo-menu">
+                    <!-- Logo -->
+                    <a href="/" class="footer-logo">
+                        <img class="footer-logo-min-image" src="/images/logo/min-logo.svg" alt="Saveurus Logo" loading="lazy" />
+                        <img class="footer-logo-image" src="/images/logo/logo2.svg" alt="Saveurus Logo" loading="lazy" />
+                    </a>
+                    <!-- Navs and Icons -->
+                    <div class="footer-navs-icons">
+                        <!-- Navs -->
+                        <div class="footer-navs">
+                            <!-- Sections Nav -->
+                            <div class="footer-menu-wrapper">
+                                <div class="footer-menu-header">
+                                    <div class="footer-menu-title">Меню сайта</div>
+                                    <span class="footer-menu-toggle">
+                                        <svg class="svg svg-arrow-expand" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.5766 9.99999L7.74326 6.16666L8.33326 5.57666L12.7566 9.99999L8.33326 14.4233L7.74326 13.8333L11.5766 9.99999Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <nav class="footer-sections">
+                                    <ul class="footer-sections-list">
+                                        <li class="footer-sections-item">
+                                            <a href="#our-menu" class="footer-sections-link">
+                                                Наше меню
+                                            </a>
+                                        </li>
+                                        <li class="footer-sections-item">
+                                            <a href="/delivery.html" class="footer-sections-link">
+                                                Доставка
+                                            </a>
+                                        </li>
+                                        <li class="footer-sections-item">
+                                            <a href="#footer" class="footer-sections-link">
+                                                Контакты
+                                            </a>
+                                        </li>
+                                        <li class="footer-sections-item">
+                                            <a href="#cafe" class="footer-sections-link">
+                                                Наши заведения
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+        
+                            <!-- Category Nav -->
+                            <div class="footer-category-wrapper">
+                                <div class="footer-category-header">
+                                    <div class="footer-category-title">Категории</div>
+                                    <span class="footer-menu-toggle">
+                                        <svg class="svg svg-arrow-expand" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.5766 9.99999L7.74326 6.16666L8.33326 5.57666L12.7566 9.99999L8.33326 14.4233L7.74326 13.8333L11.5766 9.99999Z"
+                                                fill="white" />
+                                        </svg>
+                                    </span>
+                                </div>
+                                <nav class="footer-category">
+                                    <ul class="footer-category-list">
+                                        <li class="footer-category-item">
+                                            <a href="#pirogi" class="footer-category-link">
+                                                Пироги
+                                            </a>
+                                        </li>
+                                        <li class="footer-category-item">
+                                            <a href="#konditerskie" class="footer-category-link">
+                                                Кондитерские изделия
+                                            </a>
+                                        </li>
+                                        <li class="footer-category-item">
+                                            <a href="#vypechka" class="footer-category-link">
+                                                Выпечка
+                                            </a>
+                                        </li>
+                                        <li class="footer-category-item">
+                                            <a href="#torty" class="footer-category-link">
+                                                Торты и тарты
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- Icons -->
+                        <div class="footer-icons">
+                            <a href="tel:+375448389955" class="footer-telephone-link">
+                                <img class="footer-telephone-icon" src="/icons/dark-telephone-icon.svg" alt="Telephone Icon"
+                                    loading="lazy" />
+                            </a>
+                            <a href="https://www.instagram.com/thierry_bakery/" class="footer-instagram-link">
+                                <img class="footer-instagram-icon" src="/icons/instagram-icon.svg" alt="Instagram Icon"
+                                    loading="lazy" />
+                            </a>
+                            <a href="https://web.telegram.org/a/#-1001546824691" class="footer-telegram-link">
+                                <img class="footer-telegram-icon" src="/icons/telegram-icon.svg" alt="Telegram Icon"
+                                    loading="lazy" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Telephone and C-->
+                <div class="footer-telephone-c">
+                    <div class="footer-tel-info">
+                        <a href="tel:+375448389955" class="footer-telephone-link">
+                            <span class="footer-telephone-span">+375 (44) 838-99-55</span>
+                        </a>
+                        <span class="footer-hours">с 10:00 до 20:00</span>
+                    </div>
+                    <p>© Saveurs de Maman 2025</p>
+                </div>
+            </div>
+    </footer>
+        
+    <!-- scripts -->
+    <script src="/scripts/cartStatus.js"></script>
+    <script src="/scripts/counter.js"></script>
+    <script src="/scripts/basket.js"></script>
+
+    <script src="/scripts/cartPage.js"></script>
+        
+    <script src="/scripts/main.js"></script>
+</body>    
+</html>

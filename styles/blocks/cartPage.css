@@ -1,0 +1,243 @@
+.cartpage-body {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 70px 190px 45px 130px;
+}
+
+.cartpage-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 40px 60px 0px;
+    gap: 100px;
+    width: 100%;
+}
+
+/* ------ Basket ------ */
+
+.header-basket-button {
+    cursor: none;
+}
+
+.cartpage-basket-body {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cartpage-basket-body .basket-content.filled,
+.cartpage-basket-body .basket-content.empty {
+    width: 100%;
+    padding: 0px;
+}
+
+.cartpage-basket-body .order-item {
+    gap: 30px;
+}
+
+.cartpage-basket-body .order-image {
+    width: 120px;
+    height: auto;
+    max-height: 76px;
+}
+
+.cartpage-basket-body .order-product-title {
+    font-size: 16px;
+}
+
+.cartpage-basket-body .order-product-price {
+    padding: 0px 10px 0px 30px;
+}
+
+.order-form .basket-summary,
+.cartpage-basket-body .basket-summary {
+    padding: 0px 20px;
+}
+
+.order-form .basket-summary {
+    width: 100%;
+}
+
+/* ------ Order Form ------ */
+.order-form {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.order-form-data {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+    padding: 22px 24px;
+    background-color: var(--color-white-smoke);
+    border-radius: var(--btn10-border-radius);
+    width: max-content;
+}
+
+.order-form-data-type {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.order-form-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--third-family);
+    color: var(--color-madder);
+    border-radius: 100px;
+    border: 0.5px solid var(--color-madder);
+    padding: 8px;
+    width: 36px;
+    height: 36px;
+}
+
+/* --- Adres --- */
+
+.order-form-adres {
+    padding: 22px 24px 6px 24px;
+}
+
+.order-form-adres:not(input#input-street) {
+    width: auto;
+}
+
+.order-method {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 4px;
+    font-size: 14px;
+}
+
+.order-method p {
+    margin-bottom: 0;
+}
+
+.order-method-btn {
+    color: #F4900C;
+}
+.order-method-btn:hover {
+    color: rgba(230, 140, 26, 0.8);
+}
+
+/* --- Payment --- */
+
+.order-form-payment .order-form-input {
+    flex-direction: column;
+}
+
+.payment-method {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+}
+
+.radio-custom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Custom */
+
+/* .radio-custom {
+    position: relative;
+    padding-left: 30px; 
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+
+.radio-custom input[type="radio"] {
+    display: none; 
+}
+
+.radio-custom::before {
+    content: '';
+    width: 16px; 
+    height: 16px; 
+    border-radius: 100%; 
+    background: #fff; 
+    border: 1px solid #1B1B1B; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); 
+    transition: background 0.3s; 
+}
+
+.radio-custom input[type="radio"]:checked + .radio-custom::before {
+    background: rgba(160, 4, 30, 0.75); 
+}
+
+.radio-custom input[type="radio"]:checked + .radio-custom::after {
+    content: '';
+    width: 8px; 
+    height: 8px; 
+    border-radius: 100%; 
+    background: white; 
+    position: absolute;
+    left: 4px;
+    top: 50%;
+    transform: translateY(-50%); 
+} */
+
+/* --- Input --- */
+.order-form-input {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 8px;
+    width: 100%;
+}
+
+input, .input {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    font-size: 14px;
+    color: var(--color-silver);
+    background-color: var(--color-white);
+    padding: 14px 16px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"] {
+    width: 272px; /* Ширина по умолчанию для текстовых инпутов */
+}
+
+input.input-house {
+    width: 62px; /* Ширина для инпута "Дом" */
+}
+input.input-floor {
+    width: 96px; /* Ширина для инпута "Квартира" */
+}
+input.input-other {
+    width: 198px; /* Ширина для инпута "Подъезд/Этаж/Домофон" */
+}
+
+input:focus {
+    color: var(--color-dark);
+}

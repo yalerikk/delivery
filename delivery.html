@@ -12,10 +12,9 @@
     <link rel="stylesheet" href="/styles/fonts.css">
     <!-- blocks -->
     <link rel="stylesheet" href="/styles/blocks/header.css">
+    <link rel="stylesheet" href="/styles/blocks/basket.css">
     <link rel="stylesheet" href="/styles/blocks/delivery.css">
     <link rel="stylesheet" href="/styles/blocks/footer.css">
-    <!-- scripts -->
-    <script src="/scripts/main.js"></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
             <nav class="header-menu">
                 <ul class="header-menu-list">
                     <li class="header-menu-item header-subnav">
-                        <a href="index.html#our-menu" class="header-menu-link">
+                        <a href="#our-menu" class="header-menu-link">
                             Наше меню
                             <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon" loading="lazy" />
                         </a>
@@ -41,17 +40,13 @@
                         </div>
                     </li>
                     <li class="header-menu-item">
-                        <a href="delivery.html" class="header-menu-link">
-                            Доставка
-                        </a>
+                        <a href="/delivery.html" class="header-menu-link">Доставка</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="#footer" class="header-menu-link">
-                            Контакты
-                        </a>
+                        <a href="#footer" class="header-menu-link">Контакты</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="index.html#cafe" class="header-menu-link">
+                        <a href="#cafe" class="header-menu-link">
                             <img class="header-map-icon" src="/icons/map-marker-icon.svg" alt="Map Icon" loading="lazy" />
                             Наши заведения
                         </a>
@@ -75,7 +70,10 @@
                 </div>
             </div>
             <div class="header-basket-group">
-                <p class="header-basket-cost">0 byn</p>
+                <p class="header-basket-cost">
+                    <span class="basket-cost">0</span>
+                    <span class="header-basket-byn"> byn</span>
+                </p>
                 <div class="basket-separator"></div>
                 <div class="header-basket-icon">
                     <button class="header-basket-button" type="button" title="Open basket">
@@ -85,15 +83,48 @@
                     <span class="basket-item-count">0</span>
                 </div>
             </div>
-            <button class="header-burger-button button" type="button" title="Open menu">
+            <button class="header-burger-button" type="button" title="Open menu">
                 <span class="visually-hidden">Open menu</span>
                 <img src="/icons/burger-icon.svg" alt="Burger Icon" class="header-burger" loading="lazy">
             </button>
         </div>
     </header>
+    
+    <div class="overlay"></div>
 
     <!-- Main -->
     <main class="content">
+        <!-- Basket -->
+        <section id="basket" class="basket-popup">
+            <div class="basket-body">
+                <div class="basket-content empty" style="display: none;">
+                    <img src="/images/empty-basket.png" alt="Empty Basket" width="250px" height="189px" loading="lazy" />
+                    <div class="basket-summary">
+                        <p>Сумма заказа:
+                            <span class="total-amount">0</span>
+                            <span class="byn"> byn</span>
+                        </p>
+                        <button class="basket-button">Заказать</button>
+                    </div>
+                </div>
+                <div class="basket-content filled" style="display: none;">
+                    <div class="order-wrap-list">
+                        <ul class="order-list" id="order-list">
+                            <!-- Здесь будет отрисовываться список заказанных товаров -->
+                        </ul>
+                    </div>
+                    <!-- Summary -->
+                    <div class="basket-summary">
+                        <p>Сумма заказа:
+                            <span class="total-amount">0</span>
+                            <span class="byn"> byn</span>
+                        </p>
+                        <button class="basket-button">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="delivery" class="delivery">
             <div class="delivery-body">
                 <!-- Navigation and Title -->
@@ -275,5 +306,13 @@
             </div>
         </div>
     </footer>
+
+    <!-- scripts -->
+    <script src="/scripts/saveCart.js"></script>
+    <script src="/scripts/cartStatus.js"></script>
+    <script src="/scripts/counter.js"></script>
+    <script src="/scripts/basket.js"></script>
+    
+    <script src="/scripts/main.js"></script>
 </body>
 </html>

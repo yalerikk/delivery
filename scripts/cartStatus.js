@@ -12,12 +12,12 @@ function cartStatus() {
   }
 
   function showEmptyBasket() {
-    emptyBasketContent.style.display = "block";
+    emptyBasketContent.style.display = "flex";
     filledBasketContent.style.display = "none";
   }
 
   function showFilledBasket() {
     emptyBasketContent.style.display = "none";
-    filledBasketContent.style.display = "block";
+    filledBasketContent.style.display = "flex";
   }
 }

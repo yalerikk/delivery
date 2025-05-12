@@ -20,6 +20,8 @@
 
 .basket-content.empty,
 .basket-content.filled {
+    flex-direction: column;
+    justify-content: space-between;
     width: 624px;
 }
 
@@ -69,6 +71,8 @@
 
 .basket-content.empty img {
     justify-self: center;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 32px;
 }
 
@@ -80,6 +84,12 @@
 
 .basket-content.filled {
     padding: 0px 12px 28px;
+}
+
+.basket-popup .basket-content .order-list {
+    max-height: 400px; /* Максимальная высота списка */
+    overflow-y: auto; /* Вертикальный скроллинг */
+    padding-right: 12px; /* Отступ для скроллбара */
 }
 
 /* --- Order List --- */
