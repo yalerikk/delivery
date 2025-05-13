@@ -4,7 +4,11 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 70px 130px 10px;
-    background-color: var(--color-champagne);
+}
+
+.category-filter-menu,
+.catalog-item {
+    color: var(--color-dark);
 }
 
 /* ------ Filters ------ */

@@ -37,10 +37,10 @@
                             <img class="header-our-menu-icon" src="/icons/more-icon.svg" alt="More Icon" loading="lazy" />
                         </a>
                         <div class="header-subnav-content">
-                            <a href="#pirogi">Пироги</a>
-                            <a href="#konditerskie">Кондитерские изделия</a>
-                            <a href="#vypechka">Выпечка</a>
-                            <a href="#torty">Торты и тарты</a>
+                            <a href="#category" class="navigation-item-pirogi">Пироги</a>
+                            <a href="#category" class="navigation-item-konditerskie">Кондитерские изделия</a>
+                            <a href="#category" class="navigation-item-vypechka">Выпечка</a>
+                            <a href="#category" class="navigation-item-torty">Торты и тарты</a>
                         </div>
                     </li>
                     <li class="header-menu-item">
@@ -157,7 +157,7 @@
                 <!-- category -->
                 <div class="our-menu-catalog">
                     <!-- BEGIN Catalog Item -->
-                    <a href="pirogi" class="catalog-item">
+                    <a href="#category" class="catalog-item navigation-item-pirogi">
                         <div class="catalog-item-content">
                             <img src="/images/category/pirogi-img.png" alt="Saveurs de Maman | Пироги" class="catalog-item-img">
                             <div class="catalog-item-text">Пироги</div>
@@ -166,7 +166,7 @@
                     <!-- END Catalog Item -->
                 
                     <!-- BEGIN Catalog Item -->
-                    <a href="konditerskie" class="catalog-item">
+                    <a href="#category" class="catalog-item navigation-item-konditerskie">
                         <div class="catalog-item-content">
                             <img src="/images/category/konditerskie-img.png" alt="Saveurs de Maman | Кондитерские изделия"
                                 class="catalog-item-img">
@@ -176,7 +176,7 @@
                     <!-- END Catalog Item -->
                 
                     <!-- BEGIN Catalog Item -->
-                    <a href="vypechka" class="catalog-item">
+                    <a href="#category" class="catalog-item navigation-item-vypechka">
                         <div class="catalog-item-content">
                             <img src="/images/category/vypechka-img.png" alt="Saveurs de Maman | Выпечка" class="catalog-item-img">
                             <div class="catalog-item-text">Выпечка</div>
@@ -185,9 +185,9 @@
                     <!-- END Catalog Item -->
                 
                     <!-- BEGIN Catalog Item -->
-                    <a href="torty" class="catalog-item">
+                    <a href="#category" class="catalog-item navigation-item-torty">
                         <div class="catalog-item-content">
-                            <img src="/images/category/torty-img.png" alt="Saveurs de Maman | Торты" class="catalog-item-img">
+                            <img src="/images/category/torty-img.png" alt="Saveurs de Maman | Торты и тарты" class="catalog-item-img">
                             <div class="catalog-item-text">Торты и тарты</div>
                         </div>
                     </a>
@@ -209,12 +209,23 @@
             <div class="set-body">
                 <h2 class="set-title">Сеты</h2>
                 <!-- List -->
+                <!-- main -->
                 <div class="set-wrapper">
+                    <button class="carousel-arrow carousel-arrow-left" id="arrow-left">
+                        <img src="/icons/arrow-set.svg" alt="Left Arrow">
+                    </button>
+
+                    <!-- caorusel.container -->
                     <div class="set-wrap-list">
-                        <ul class="set-list" id="set-list">
+                        <!-- carousel-slide -->
+                        <ul class="owl-carousel owl-theme set-list" id="set-list">
                             <!-- Отрисовка карточек будет производится в JS -->
                         </ul>
                     </div>
+                    
+                    <button class="carousel-arrow carousel-arrow-right" id="arrow-right">
+                        <img src="/icons/arrow-set.svg" alt="Right Arrow" class="flipped">
+                    </button>
                 </div>
             </div>
         </section>
@@ -325,23 +336,23 @@
                             </div>
                             <nav class="footer-category">
                                 <ul class="footer-category-list">
-                                    <li class="footer-category-item">
-                                        <a href="#pirogi" class="footer-category-link">
+                                    <li class="footer-category-item navigation-item-pirogi">
+                                        <a href="#category" class="footer-category-link">
                                             Пироги
                                         </a>
                                     </li>
-                                    <li class="footer-category-item">
-                                        <a href="#konditerskie" class="footer-category-link">
+                                    <li class="footer-category-item navigation-item-konditerskie">
+                                        <a href="#category" class="footer-category-link">
                                             Кондитерские изделия
                                         </a>
                                     </li>
-                                    <li class="footer-category-item">
-                                        <a href="#vypechka" class="footer-category-link">
+                                    <li class="footer-category-item navigation-item-vypechka">
+                                        <a href="#category" class="footer-category-link">
                                             Выпечка
                                         </a>
                                     </li>
-                                    <li class="footer-category-item">
-                                        <a href="#torty" class="footer-category-link">
+                                    <li class="footer-category-item navigation-item-torty">
+                                        <a href="#category" class="footer-category-link">
                                             Торты и тарты
                                         </a>
                                     </li>
@@ -359,6 +370,9 @@
                         </a>
                         <a href="https://web.telegram.org/a/#-1001546824691" class="footer-telegram-link">
                             <img class="footer-telegram-icon" src="/icons/telegram-icon.svg" alt="Telegram Icon" loading="lazy" />
+                        </a>
+                        <a class="footer-moon-link" id="theme-toggle">
+                            <img class="footer-dark-icon" src="/icons/moon.svg" alt="Moon Icon" loading="lazy" />
                         </a>
                     </div>
                 </div>
@@ -378,10 +392,13 @@
 
     <!-- scripts -->
     <script src="/scripts/renderProducts.js"></script>
+
+    <!--  -->
+
     <script src="/scripts/cartStatus.js"></script>
     <script src="/scripts/counter.js"></script>
     <script src="/scripts/basket.js"></script>
-
+    <script src="/scripts/set.js"></script>
     <script src="/scripts/main.js"></script>
 </body>
 </html>

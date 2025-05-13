@@ -9,8 +9,39 @@
 
 /* overflow-x: auto */
 
+.flipped {
+    transform: scaleX(-1); /* Отзеркаливаем по горизонтали */
+}
+
+/* Caorusel */
+
+.carousel-arrow {
+    opacity: .9;
+    transition: var(--transition-duration);
+}
+
+.carousel-arrow:hover,
+.carousel-arrow:focus {
+    opacity: 1;
+}
+
+.set-wrap-list {
+    overflow: hidden;
+    /* Скрываем лишние элементы */
+    width: 100%;
+    /* Устанавливаем ширину */
+}
+
 .set-list {
-    display: grid;
-    grid-template-columns: repeat(3, 378px);
-    gap: 24px;
+    display: flex;
+    /* Используем flex для карусели */
+    transition: transform 0.5s ease;
+    /* Плавный переход */
+}
+
+.set-list li {
+    min-width: 33.33%;
+    /* 3 элемента в ряд */
+    list-style: none;
+    /* Убираем маркеры списка */
 }

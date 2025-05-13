@@ -5,6 +5,13 @@ const filterButtons = document.querySelectorAll(".filter-btn");
 let productsArray = [];
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Сбрасываем стили и устанавливаем активную кнопку по умолчанию
+  filterButtons.forEach((btn) => btn.classList.remove("filter-btn-active"));
+  const defaultButton = document.querySelector(".filter-btn-pirogi");
+  if (defaultButton) {
+    defaultButton.classList.add("filter-btn-active");
+  }
+  
   getProducts();
 
   filterButtons.forEach((button) => {
@@ -18,6 +25,53 @@ document.addEventListener("DOMContentLoaded", function () {
       filterProducts();
     });
   });
+
+  // Обработчик клика для элементов каталога
+  const catalogItems = document.querySelectorAll(".catalog-item");
+  catalogItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      activateFilterButton(this);
+      // Фильтруем продукты в зависимости от активной кнопки
+      filterProducts();
+    });
+  });
+
+  // Обработчик клика для элементов хедера
+  const headerLinks = document.querySelectorAll(".header-subnav-content a");
+  headerLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      activateFilterButton(this);
+      // Фильтруем продукты в зависимости от активной кнопки
+      filterProducts();
+    });
+  });
+
+  // Обработчик клика для элементов футера
+  const footerLinks = document.querySelectorAll(".footer-category-list a");
+  footerLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      activateFilterButton(this.parentElement); // Передаем родительский элемент
+      // Фильтруем продукты в зависимости от активной кнопки
+      filterProducts();
+    });
+  });
+
+  function activateFilterButton(element) {
+    const classes = element.classList; // Получаем классы элемента
+    classes.forEach((cls) => {
+      if (cls.startsWith("navigation-item-")) {
+        const category = cls.split("-")[2]; // Получаем категорию
+        // Активируем соответствующую кнопку фильтра
+        filterButtons.forEach((btn) => {
+          if (btn.classList.contains(`filter-btn-${category}`)) {
+            btn.classList.add("filter-btn-active");
+          } else {
+            btn.classList.remove("filter-btn-active");
+          }
+        });
+      }
+    });
+  }
 });
 
 async function getProducts() {

@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 70px 130px 26px;
-    background-color: var(--color-champagne);
 }
 
 .our-menu-title {
@@ -35,6 +34,11 @@
     position: relative;
     overflow: hidden;
     height: 320px;
+    transition: var(--transition-arrow);
+}
+
+.catalog-item-content:hover {
+    opacity: 0.8; 
 }
 
 .catalog-item-img {

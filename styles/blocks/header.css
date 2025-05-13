@@ -11,6 +11,7 @@
     padding: 8px 130px;
     max-height: 100px;
     font-weight: 500;
+    color: var(--color-dark);
 }
 
 /* ------ Menu and Logo ------ */

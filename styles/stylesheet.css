@@ -20,6 +20,9 @@
     --color-silver: #B7B7B7;
     --color-platinum: #E2E1E1;
 
+    --body-bg-color: var(--color-floral-white);
+    --text-color: var(--color-dark);
+
     /* ------ Fonts ------ */
     --font-family: "Manrope", sans-serif;
     --second-family: "Avenir Next", sans-serif;
@@ -71,9 +74,15 @@ body {
     font-weight: 400;
     /*  */
     line-height: 1.5;
-    color: var(--color-dark);
-    background-color: var(--color-floral-white);
+    color: var(--text-color);
+    background-color: var(--body-bg-color);
     overflow-x: hidden;
+}
+
+.dark-theme {
+    --body-bg-color: #20201F;
+    --text-color: var(--color-white);
+    --section-bg-color: #3B3731;
 }
 
 .container {

@@ -1,6 +1,7 @@
 // ------ Header ------
 
 document.addEventListener("DOMContentLoaded", function () {
+  setInitialBackgroundColors();
   const burgerButton = document.querySelector(".header-burger-button");
   const headerMenu = document.querySelector(".header-menu");
   const overlay = document.querySelector(".overlay");
@@ -101,4 +102,47 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+});
+
+const themeToggleButton = document.getElementById("theme-toggle");
+
+themeToggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-theme");
+
+  const icon = themeToggleButton.querySelector("img");
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "/icons/sun.svg"; // Изменяем иконку на солнце
+        applyDarkTheme();
+  } else {
+    icon.src = "/icons/moon.svg"; // Возвращаем иконку на луну
+        resetTheme();
+  }
+
+  function setInitialBackgroundColors() {
+    const categorySection = document.getElementById("category");
+    const menuSection = document.getElementById("our-menu");
+
+    if (categorySection) {
+      categorySection.style.backgroundColor = "#ECDBC2"; // Устанавливаем начальный цвет
+    }
+    if (menuSection) {
+      menuSection.style.backgroundColor = "#ECDBC2"; // Устанавливаем начальный цвет
+    }
+  }
+
+  function applyDarkTheme() {
+    const categorySection = document.getElementById("category");
+    const menuSection = document.getElementById("our-menu");
+
+    if (categorySection) {
+      categorySection.style.backgroundColor = "#3B3731"; // Темный фон для категории
+    }
+    if (menuSection) {
+      menuSection.style.backgroundColor = "#3B3731"; // Темный фон для меню
+    }
+  }
+
+  function resetTheme() {
+    setInitialBackgroundColors(); // Возвращаем начальный цвет
+  }
 });
