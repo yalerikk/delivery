@@ -2,7 +2,7 @@
 
 <h2>Студентки гр.210902 Химорода Валерии Сергеевны</h2>
 
-[Перейти на сайт](https://yalerikk.github.io/delivery)<br>
+[Перейти на сайт](https://yalerikk.github.io/delivery/index.html)<br>
 
 ## delivery
 
